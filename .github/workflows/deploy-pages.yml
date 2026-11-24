@@ -23,8 +23,9 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v4
 
-      - name: Configure Pages (enables it on first run if needed)
+      - name: Configure Pages (enables it on first run where permitted)
         uses: actions/configure-pages@v5
+        continue-on-error: true
         with:
           enablement: true
 
