@@ -38,6 +38,25 @@ assets/img/           photography and the favicon
 - **Motion** — preloader, hero parallax, scroll reveals, animated counters, marquee,
   scroll-spy, plus a full `prefers-reduced-motion` path.
 
+## Deployment
+
+The site is published by GitHub Pages straight from the `gh-pages` branch, which
+mirrors the repository root — no build step, no workflow:
+
+- **Settings → Pages → Source:** *Deploy from a branch* → `gh-pages` / `/ (root)`
+- Live at <https://gowthamgaraga18-lab.github.io/ELITE-CARS/>
+
+After changing `index.html`, `styles.css` or `assets/`, update the published branch:
+
+```bash
+git checkout gh-pages        # or: git push origin main:gh-pages
+git merge main               # fast-forward the published tree
+git push origin gh-pages     # Pages rebuilds in ~30s
+```
+
+`.nojekyll` is present so the static files are served untouched. `404.html` handles
+deep links.
+
 ## Notes
 
 This is a demonstration site. Form submissions are validated and stored in the
